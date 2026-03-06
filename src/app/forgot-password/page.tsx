@@ -18,14 +18,14 @@ export default function ForgotPasswordPage() {
                     </Link>
                 </div>
 
-                <div className="text-center mb-8">
-                    <h1 className="text-3xl font-black text-dark mb-2">Reset Password</h1>
-                    <p className="text-gray-500">Enter your email and we'll send you a link to reset your password.</p>
+                <div className="text-center mb-10">
+                    <h1 className="text-4xl font-black text-gray-900 mb-2 tracking-tight">Reset Password</h1>
+                    <p className="text-gray-500 font-medium tracking-tight">Enter your email and we&apos;ll send you a link to reset your password.</p>
                 </div>
 
                 <form className="space-y-6">
                     <div className="space-y-2">
-                        <label className="text-sm font-bold text-gray-700 ml-1">Email Address</label>
+                        <label className="text-sm font-black text-gray-900 ml-1 uppercase tracking-widest">Email Address</label>
                         <div className="relative group">
                             <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400 group-focus-within:text-primary transition-colors">
                                 <Mail className="w-5 h-5" />
@@ -34,7 +34,7 @@ export default function ForgotPasswordPage() {
                                 required
                                 type="email"
                                 placeholder="name@example.com"
-                                className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-dark font-medium"
+                                className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-300 outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-gray-900 font-bold placeholder:text-gray-400 shadow-sm"
                             />
                         </div>
                     </div>

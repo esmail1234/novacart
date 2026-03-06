@@ -43,7 +43,7 @@ export default function DealsPage() {
                         <h2 className="text-3xl font-black mb-4">First Purchase?</h2>
                         <p className="text-gray-500 mb-8">Use code <span className="text-primary font-black">NOVA20</span> for an extra 20% off your first luxury order.</p>
                     </div>
-                    <button className="text-dark font-bold flex items-center gap-2 group-hover:gap-4 transition-all">
+                    <button className="text-gray-900 font-extrabold flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-sm">
                         Get Coupon <ArrowRight className="w-5 h-5" />
                     </button>
                 </div>

@@ -35,8 +35,8 @@ export default function LoginPage() {
                 <div className="absolute bottom-0 left-0 w-32 h-32 bg-accent/5 rounded-full -ml-16 -mb-16 blur-3xl"></div>
 
                 <div className="text-center mb-10 relative">
-                    <h1 className="text-3xl font-black text-dark mb-2 tracking-tight">Welcome Back</h1>
-                    <p className="text-gray-500">Sign in to your account to continue</p>
+                    <h1 className="text-4xl font-black text-gray-900 mb-2 tracking-tight">Welcome Back</h1>
+                    <p className="text-gray-500 font-medium">Sign in to your account to continue</p>
                 </div>
 
                 {isSuccess ? (
@@ -54,7 +54,7 @@ export default function LoginPage() {
                 ) : (
                     <form onSubmit={handleSubmit} className="space-y-6 relative">
                         <div className="space-y-2">
-                            <label className="text-sm font-bold text-gray-700 ml-1">Email Address</label>
+                            <label className="text-sm font-black text-gray-900 ml-1 uppercase tracking-widest">Email Address</label>
                             <div className="relative group">
                                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400 group-focus-within:text-primary transition-colors">
                                     <Mail className="w-5 h-5" />
@@ -63,14 +63,14 @@ export default function LoginPage() {
                                     required
                                     type="email"
                                     placeholder="name@example.com"
-                                    className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-dark font-medium"
+                                    className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-300 outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-gray-900 font-bold placeholder:text-gray-400"
                                 />
                             </div>
                         </div>
 
                         <div className="space-y-2">
                             <div className="flex justify-between items-center ml-1">
-                                <label className="text-sm font-bold text-gray-700">Password</label>
+                                <label className="text-sm font-black text-gray-900 uppercase tracking-widest">Password</label>
                                 <Link href="/forgot-password" className="text-xs font-bold text-primary hover:underline">Forgot Password?</Link>
                             </div>
                             <div className="relative group">
@@ -81,7 +81,7 @@ export default function LoginPage() {
                                     required
                                     type={showPassword ? "text" : "password"}
                                     placeholder="••••••••"
-                                    className="w-full pl-12 pr-12 py-4 rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-dark font-medium"
+                                    className="w-full pl-12 pr-12 py-4 rounded-2xl border border-gray-300 outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-gray-900 font-bold placeholder:text-gray-400"
                                 />
                                 <button
                                     type="button"

@@ -90,7 +90,7 @@ export default function ShopPage() {
             {/* Header & Search */}
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
                 <div>
-                    <h1 className="text-3xl md:text-4xl font-black tracking-tight text-dark mb-2">
+                    <h1 className="text-4xl md:text-5xl font-black tracking-tight text-gray-900 mb-2">
                         Shop All
                     </h1>
                     <p className="text-gray-500 max-w-xl">
@@ -132,14 +132,14 @@ export default function ShopPage() {
                             className="w-full lg:w-64 flex-shrink-0 lg:block overflow-hidden lg:overflow-visible"
                         >
                             <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm space-y-8 sticky top-24">
-                                <div className="flex items-center gap-2 font-bold text-lg border-b border-gray-100 pb-4">
-                                    <SlidersHorizontal className="w-5 h-5" />
+                                <div className="flex items-center gap-2 font-bold text-lg border-b border-gray-100 pb-4 text-gray-900">
+                                    <SlidersHorizontal className="w-5 h-5 text-primary" />
                                     Filters
                                 </div>
 
                                 {/* Categories */}
                                 <div>
-                                    <h3 className="font-semibold text-dark mb-4">Categories</h3>
+                                    <h3 className="font-black text-gray-900 mb-4 uppercase text-xs tracking-widest">Categories</h3>
                                     <div className="space-y-2">
                                         {[{ id: 'All', label: 'All' }, ...categories].map((category) => (
                                             <label key={category.id} className="flex items-center gap-3 cursor-pointer group">
@@ -162,8 +162,8 @@ export default function ShopPage() {
                                 {/* Price Range */}
                                 <div>
                                     <div className="flex justify-between items-center mb-4">
-                                        <h3 className="font-semibold text-dark">Price</h3>
-                                        <span className="text-sm font-medium text-primary">Up to ${priceRange}</span>
+                                        <h3 className="font-black text-gray-900 uppercase text-xs tracking-widest">Price Limit</h3>
+                                        <span className="text-sm font-bold text-primary bg-primary/5 px-2 py-1 rounded-md">Up to ${priceRange}</span>
                                     </div>
                                     <input
                                         type="range"
@@ -182,7 +182,7 @@ export default function ShopPage() {
 
                                 {/* Rating */}
                                 <div>
-                                    <h3 className="font-semibold text-dark mb-4">Minimum Rating</h3>
+                                    <h3 className="font-black text-gray-900 uppercase text-xs tracking-widest mb-4">Min. Rating</h3>
                                     <div className="space-y-2">
                                         {[4, 3, 2, 1].map((rating) => (
                                             <label key={rating} className="flex items-center gap-3 cursor-pointer group">
@@ -228,8 +228,8 @@ export default function ShopPage() {
                 <div className="flex-1 flex flex-col min-h-[500px]">
                     {/* Active Filters & Sorting */}
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-                        <p className="text-gray-600 font-medium">
-                            Showing <span className="font-bold text-dark">{filteredProducts.length}</span> results
+                        <p className="text-gray-500 font-bold uppercase tracking-widest text-xs">
+                            Showing <span className="text-gray-900">{filteredProducts.length}</span> items total
                         </p>
 
                         <div className="flex items-center gap-2">
@@ -238,7 +238,7 @@ export default function ShopPage() {
                                 <select
                                     value={sortBy}
                                     onChange={(e) => setSortBy(e.target.value as SortOption)}
-                                    className="appearance-none bg-white border border-gray-200 rounded-lg pl-3 pr-10 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary shadow-sm cursor-pointer"
+                                    className="appearance-none bg-white border border-gray-300 rounded-lg pl-3 pr-10 py-2.5 text-sm font-bold text-gray-900 focus:outline-none focus:ring-4 focus:ring-primary/5 focus:border-primary shadow-sm cursor-pointer transition-all"
                                 >
                                     <option value="popular">Most Popular</option>
                                     <option value="newest">Newest</option>

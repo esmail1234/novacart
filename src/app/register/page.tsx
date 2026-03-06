@@ -54,8 +54,8 @@ export default function RegisterPage() {
                 className="w-full max-w-md bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-2xl relative overflow-hidden"
             >
                 <div className="text-center mb-10">
-                    <h1 className="text-3xl font-black text-dark mb-2 tracking-tight">Join NovaCart</h1>
-                    <p className="text-gray-500">Experience the future of premium shopping</p>
+                    <h1 className="text-4xl font-black text-gray-900 mb-2 tracking-tight">Join NovaCart</h1>
+                    <p className="text-gray-500 font-medium">Experience the future of premium shopping</p>
                 </div>
 
                 {isSuccess ? (
@@ -67,8 +67,8 @@ export default function RegisterPage() {
                         >
                             <CheckCircle className="w-8 h-8" />
                         </motion.div>
-                        <p className="font-bold text-dark">Registration Successful!</p>
-                        <p className="text-sm text-gray-500">Taking you to login page...</p>
+                        <p className="font-black text-gray-900 text-lg">Registration Successful!</p>
+                        <p className="text-sm text-gray-500 font-medium">Taking you to login page...</p>
                     </div>
                 ) : (
                     <form onSubmit={handleSubmit} className="space-y-5">
@@ -82,7 +82,7 @@ export default function RegisterPage() {
                             </motion.div>
                         )}
                         <div className="space-y-2">
-                            <label className="text-sm font-bold text-gray-700 ml-1">Full Name</label>
+                            <label className="text-sm font-black text-gray-900 ml-1 uppercase tracking-widest">Full Name</label>
                             <div className="relative group">
                                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400 group-focus-within:text-primary transition-colors">
                                     <User className="w-5 h-5" />
@@ -94,13 +94,13 @@ export default function RegisterPage() {
                                     value={formData.name}
                                     onChange={handleChange}
                                     placeholder="John Doe"
-                                    className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-dark font-medium"
+                                    className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-300 outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-gray-900 font-bold placeholder:text-gray-400"
                                 />
                             </div>
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm font-bold text-gray-700 ml-1">Email Address</label>
+                            <label className="text-sm font-black text-gray-900 ml-1 uppercase tracking-widest">Email Address</label>
                             <div className="relative group">
                                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400 group-focus-within:text-primary transition-colors">
                                     <Mail className="w-5 h-5" />
@@ -112,13 +112,13 @@ export default function RegisterPage() {
                                     value={formData.email}
                                     onChange={handleChange}
                                     placeholder="john@example.com"
-                                    className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-dark font-medium"
+                                    className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-300 outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-gray-900 font-bold placeholder:text-gray-400"
                                 />
                             </div>
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm font-bold text-gray-700 ml-1">Password</label>
+                            <label className="text-sm font-black text-gray-900 ml-1 uppercase tracking-widest">Password</label>
                             <div className="relative group">
                                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400 group-focus-within:text-primary transition-colors">
                                     <Lock className="w-5 h-5" />
@@ -130,13 +130,13 @@ export default function RegisterPage() {
                                     value={formData.password}
                                     onChange={handleChange}
                                     placeholder="••••••••"
-                                    className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-dark font-medium"
+                                    className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-300 outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-gray-900 font-bold placeholder:text-gray-400"
                                 />
                             </div>
                         </div>
 
                         <div className="space-y-2">
-                            <label className="text-sm font-bold text-gray-700 ml-1">Confirm Password</label>
+                            <label className="text-sm font-black text-gray-900 ml-1 uppercase tracking-widest">Confirm Password</label>
                             <div className="relative group">
                                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400 group-focus-within:text-primary transition-colors">
                                     <Lock className="w-5 h-5" />
@@ -148,7 +148,7 @@ export default function RegisterPage() {
                                     value={formData.confirmPassword}
                                     onChange={handleChange}
                                     placeholder="••••••••"
-                                    className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-dark font-medium"
+                                    className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-300 outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all text-gray-900 font-bold placeholder:text-gray-400"
                                 />
                             </div>
                         </div>
@@ -157,7 +157,7 @@ export default function RegisterPage() {
                             <button
                                 disabled={isLoading}
                                 type="submit"
-                                className="w-full bg-dark text-white py-4 rounded-2xl font-black text-lg shadow-xl hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:scale-100 transition-all flex items-center justify-center gap-2"
+                                className="w-full bg-gray-900 text-white py-4 rounded-2xl font-black text-lg shadow-xl hover:bg-black active:scale-[0.98] disabled:opacity-70 disabled:scale-100 transition-all flex items-center justify-center gap-2"
                             >
                                 {isLoading ? (
                                     <div className="w-6 h-6 border-4 border-white border-t-transparent rounded-full animate-spin"></div>

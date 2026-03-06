@@ -21,8 +21,8 @@ export default function CategoriesPage() {
     return (
         <div className="container mx-auto px-4 py-12 md:py-20">
             <div className="max-w-2xl mb-16">
-                <h1 className="text-4xl md:text-5xl font-black text-dark mb-6 tracking-tight">
-                    Explore Our <span className="text-primary">Categories</span>
+                <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-6 tracking-tighter">
+                    Explore Our <span className="text-primary italic">Categories</span>
                 </h1>
                 <p className="text-gray-500 text-lg">
                     Browse our curated collections and find the perfect products for your lifestyle, from premium tech to luxury home essentials.

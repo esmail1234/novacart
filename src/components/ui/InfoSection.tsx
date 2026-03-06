@@ -44,7 +44,7 @@ export const InfoSection = () => {
                             <div className="w-16 h-16 rounded-full bg-indigo-50 flex items-center justify-center mb-6">
                                 <stat.icon className="w-8 h-8 text-primary" />
                             </div>
-                            <h3 className="text-4xl font-black text-dark mb-2 tracking-tight">{stat.value}</h3>
+                            <h3 className="text-5xl font-black text-gray-900 mb-2 tracking-tight">{stat.value}</h3>
                             <p className="text-gray-500 font-medium tracking-wide uppercase text-sm">{stat.label}</p>
                         </div>
                     ))}
@@ -52,7 +52,7 @@ export const InfoSection = () => {
 
                 {/* Quality Features */}
                 <div className="text-center max-w-2xl mx-auto mb-16">
-                    <h2 className="text-3xl md:text-5xl font-black text-dark mb-6 tracking-tight">Why Choose NovaCart</h2>
+                    <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 tracking-tight">Why Choose NovaCart</h2>
                     <p className="text-gray-600 text-lg">
                         We don&apos;t just sell products; we deliver an experience. Here&apos;s why thousands of shoppers trust us.
                     </p>
@@ -67,7 +67,7 @@ export const InfoSection = () => {
                             <div className="w-14 h-14 rounded-2xl bg-cyan-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                                 <feature.icon className="w-7 h-7 text-secondary" />
                             </div>
-                            <h4 className="text-xl font-bold text-dark mb-3">{feature.title}</h4>
+                            <h4 className="text-xl font-black text-gray-900 mb-3">{feature.title}</h4>
                             <p className="text-gray-600 leading-relaxed">{feature.description}</p>
                         </div>
                     ))}
