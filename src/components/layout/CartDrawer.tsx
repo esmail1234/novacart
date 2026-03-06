@@ -48,14 +48,14 @@ export function CartDrawer() {
                                 <div className="bg-primary/10 p-2 rounded-full text-primary">
                                     <ShoppingBag className="w-5 h-5" />
                                 </div>
-                                <h2 className="text-xl font-bold text-dark">Your Cart</h2>
-                                <span className="bg-gray-100 text-gray-600 text-xs font-bold px-2.5 py-1 rounded-full">
+                                <h2 className="text-xl font-black text-gray-900 tracking-tight">Your Cart</h2>
+                                <span className="bg-gray-100 text-gray-900 text-xs font-black px-3 py-1 rounded-full border border-gray-200">
                                     {getTotalItems()}
                                 </span>
                             </div>
                             <button
                                 onClick={closeCart}
-                                className="p-2 text-gray-400 hover:text-dark hover:bg-gray-100 rounded-full transition-colors"
+                                className="p-2 text-gray-400 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors border border-transparent hover:border-gray-200"
                                 aria-label="Close cart"
                             >
                                 <X className="w-5 h-5" />
@@ -70,8 +70,8 @@ export function CartDrawer() {
                                         <ShoppingBag className="w-10 h-10" />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-medium text-dark">Your cart is empty</h3>
-                                        <p className="text-gray-500 mt-1">Looks like you haven&apos;t added anything yet.</p>
+                                        <h3 className="text-xl font-black text-gray-900">Your cart is empty</h3>
+                                        <p className="text-gray-500 font-medium mt-1">Looks like you haven&apos;t added anything yet.</p>
                                     </div>
                                     <button
                                         onClick={closeCart}
@@ -99,10 +99,10 @@ export function CartDrawer() {
                                             <div className="flex flex-col flex-1 justify-between">
                                                 <div>
                                                     <div className="flex justify-between items-start">
-                                                        <h4 className="font-semibold text-dark text-sm line-clamp-2 pr-4 text-left">
+                                                        <h4 className="font-bold text-gray-900 text-sm line-clamp-2 pr-4 text-left leading-snug">
                                                             {item.product.title}
                                                         </h4>
-                                                        <span className="font-bold text-dark whitespace-nowrap">
+                                                        <span className="font-black text-indigo-600 whitespace-nowrap text-base">
                                                             ${(item.product.price * item.quantity).toFixed(2)}
                                                         </span>
                                                     </div>
@@ -158,9 +158,9 @@ export function CartDrawer() {
                                         <span>Shipping</span>
                                         <span>Calculated at checkout</span>
                                     </div>
-                                    <div className="flex justify-between text-lg font-bold text-dark pt-3 border-t border-gray-200">
+                                    <div className="flex justify-between text-xl font-black text-gray-900 pt-3 border-t border-gray-200">
                                         <span>Total</span>
-                                        <span>${getTotalPrice().toFixed(2)}</span>
+                                        <span className="text-indigo-600">${getTotalPrice().toFixed(2)}</span>
                                     </div>
                                 </div>
 
@@ -168,7 +168,7 @@ export function CartDrawer() {
                                     <Link
                                         href="/cart"
                                         onClick={closeCart}
-                                        className="flex items-center justify-center py-4 bg-white border border-gray-200 text-dark font-medium rounded-xl hover:bg-gray-50 transition-colors"
+                                        className="flex items-center justify-center py-4 bg-white border border-gray-200 text-gray-900 font-black rounded-xl hover:bg-gray-50 transition-colors shadow-sm"
                                     >
                                         View Cart
                                     </Link>

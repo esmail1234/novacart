@@ -12,15 +12,16 @@ export default function CheckoutPage() {
     const { items, getTotalPrice } = useCartStore();
     const mounted = useMounted();
     const [isSuccess, setIsSuccess] = useState(false);
+    const [orderNumber, setOrderNumber] = useState("");
 
     if (!mounted) return null;
 
     if (items.length === 0 && !isSuccess) {
         return (
             <div className="container mx-auto px-4 py-20 text-center">
-                <h1 className="text-3xl font-black mb-4">Your cart is empty</h1>
-                <p className="text-gray-500 mb-8">Add some products to your cart before checking out.</p>
-                <Link href="/shop" className="bg-primary text-white px-8 py-3 rounded-xl font-bold">
+                <h1 className="text-4xl font-black mb-4 text-gray-900">Your cart is empty</h1>
+                <p className="text-gray-500 font-medium mb-8">Add some products to your cart before checking out.</p>
+                <Link href="/shop" className="bg-gray-900 text-white px-10 py-4 rounded-xl font-black shadow-lg">
                     Start Shopping
                 </Link>
             </div>
@@ -34,6 +35,7 @@ export default function CheckoutPage() {
 
     const handleCheckout = (e: React.FormEvent) => {
         e.preventDefault();
+        setOrderNumber((Math.random() * 10000).toFixed(0));
         setIsSuccess(true);
         useCartStore.getState().clearCart();
     };
@@ -48,15 +50,15 @@ export default function CheckoutPage() {
                 <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <CheckCircle2 className="w-10 h-10" />
                 </div>
-                <h1 className="text-4xl font-black mb-4">Order Confirmed!</h1>
-                <p className="text-gray-600 mb-8">
-                    Thank you for your purchase. Your order #NC-{(Math.random() * 10000).toFixed(0)} is being processed and will be shipped soon.
+                <h1 className="text-4xl font-black mb-4 text-gray-900 tracking-tight">Order Confirmed!</h1>
+                <p className="text-gray-500 font-medium mb-8">
+                    Thank you for your purchase. Your order #NC-{orderNumber} is being processed and will be shipped soon.
                 </p>
                 <div className="space-y-4">
-                    <Link href="/shop" className="block w-full bg-primary text-white py-4 rounded-xl font-bold shadow-lg shadow-primary/20">
+                    <Link href="/shop" className="block w-full bg-gray-900 text-white py-4 rounded-xl font-black shadow-xl hover:bg-black transition-all active:scale-95">
                         Continue Shopping
                     </Link>
-                    <Link href="/" className="block w-full text-gray-500 font-medium hover:text-dark">
+                    <Link href="/" className="block w-full text-gray-400 font-bold hover:text-gray-900 transition-colors uppercase tracking-widest text-xs">
                         Return to Home
                     </Link>
                 </div>

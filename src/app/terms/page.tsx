@@ -13,7 +13,7 @@ export default function TermsPage() {
                 <h1 className="text-4xl font-black mb-10">Terms of Service</h1>
                 <div className="space-y-8 text-gray-600">
                     <section>
-                        <h2 className="text-2xl font-bold text-dark mb-4">1. Acceptance of Terms</h2>
+                        <h2 className="text-2xl font-black text-gray-900 mb-4 tracking-tight">1. Acceptance of Terms</h2>
                         <p>By accessing and using NovaCart, you agree to comply with and be bound by these Terms of Service. If you do not agree, please refrain from using our platform.</p>
                     </section>
                     <section>

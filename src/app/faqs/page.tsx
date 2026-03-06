@@ -17,12 +17,12 @@ export default function FAQsPage() {
                 animate={{ opacity: 1, y: 0 }}
                 className="max-w-4xl mx-auto"
             >
-                <h1 className="text-4xl font-black mb-10 text-center">Frequently Asked <span className="text-primary">Questions</span></h1>
-                <div className="space-y-4">
+                <h1 className="text-6xl font-black mb-12 text-center text-gray-900 tracking-tighter">Frequently Asked <span className="text-primary italic border-b-4 border-primary/20 pb-2">Questions</span></h1>
+                <div className="space-y-6">
                     {faqs.map((faq, i) => (
-                        <div key={i} className="p-8 bg-white rounded-3xl border border-gray-100 shadow-sm">
-                            <h3 className="text-xl font-bold text-dark mb-3">{faq.q}</h3>
-                            <p className="text-gray-500 leading-relaxed">{faq.a}</p>
+                        <div key={i} className="p-10 bg-white rounded-[2.5rem] border border-gray-100 shadow-xl shadow-gray-200/50 hover:border-primary/20 transition-all group">
+                            <h3 className="text-2xl font-black text-gray-900 mb-4 tracking-tight group-hover:text-primary transition-colors">{faq.q}</h3>
+                            <p className="text-gray-500 font-medium leading-relaxed text-lg">{faq.a}</p>
                         </div>
                     ))}
                 </div>

@@ -13,7 +13,7 @@ export default function ShippingPage() {
                 <h1 className="text-4xl font-black mb-10">Shipping Policy</h1>
                 <div className="space-y-8 text-gray-600">
                     <section>
-                        <h2 className="text-2xl font-bold text-dark mb-4">Delivery Options</h2>
+                        <h2 className="text-2xl font-black text-gray-900 mb-4 tracking-tight">Delivery Options</h2>
                         <div className="grid sm:grid-cols-2 gap-4">
                             <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
                                 <h3 className="font-bold mb-2">Standard Shipping</h3>

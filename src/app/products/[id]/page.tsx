@@ -48,7 +48,7 @@ export default function ProductDetailsPage({ params }: { params: Promise<{ id: s
             <div className="mb-8">
                 <Link
                     href="/shop"
-                    className="inline-flex items-center text-sm font-medium text-gray-500 hover:text-dark transition-colors"
+                    className="inline-flex items-center text-sm font-bold text-gray-500 hover:text-primary transition-colors"
                 >
                     <ArrowLeft className="w-4 h-4 mr-2" />
                     Back to Shop
@@ -122,22 +122,22 @@ export default function ProductDetailsPage({ params }: { params: Promise<{ id: s
                 {/* Product Info */}
                 <div className="flex flex-col">
                     <div className="mb-6">
-                        <div className="flex items-center gap-2 mb-3">
-                            <span className="text-sm font-semibold text-primary uppercase tracking-wider bg-primary/10 px-3 py-1 rounded-full">
+                        <div className="flex items-center gap-3 mb-4">
+                            <span className="text-xs font-black text-indigo-600 uppercase tracking-widest bg-indigo-50 border border-indigo-100 px-3 py-1.5 rounded-full">
                                 {product.category}
                             </span>
-                            <div className="flex items-center gap-1 text-sm bg-gray-100 px-3 py-1 rounded-full">
-                                <Star className="w-4 h-4 fill-accent text-accent" />
-                                <span className="font-bold text-dark">{product.rating}</span>
-                                <span className="text-gray-500">({product.reviews} reviews)</span>
+                            <div className="flex items-center gap-1.5 text-sm font-bold bg-yellow-50 text-yellow-700 border border-yellow-100 px-3 py-1.5 rounded-full">
+                                <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                                <span>{product.rating}</span>
+                                <span className="text-yellow-600/60 font-medium ml-1">({product.reviews} reviews)</span>
                             </div>
                         </div>
 
-                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-dark tracking-tight mb-4">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight mb-4 leading-tight">
                             {product.title}
                         </h1>
 
-                        <div className="text-3xl font-bold text-dark mb-6">
+                        <div className="text-4xl font-black text-indigo-600 mb-8 tracking-tighter">
                             ${product.price.toFixed(2)}
                         </div>
 
@@ -152,17 +152,17 @@ export default function ProductDetailsPage({ params }: { params: Promise<{ id: s
                             <div className="flex items-center bg-gray-50 border border-gray-200 rounded-xl px-2 h-14 w-full sm:w-auto">
                                 <button
                                     onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                                    className="w-10 h-10 flex items-center justify-center text-gray-500 hover:text-dark hover:bg-white rounded-lg shadow-sm transition-all"
+                                    className="w-10 h-10 flex items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-white rounded-lg shadow-sm transition-all border border-transparent hover:border-gray-200"
                                     disabled={quantity <= 1}
                                 >
                                     <Minus className="w-4 h-4" />
                                 </button>
-                                <span className="w-12 text-center font-semibold text-dark">
+                                <span className="w-12 text-center font-bold text-gray-900 text-lg">
                                     {quantity}
                                 </span>
                                 <button
                                     onClick={() => setQuantity(quantity + 1)}
-                                    className="w-10 h-10 flex items-center justify-center text-gray-500 hover:text-dark hover:bg-white rounded-lg shadow-sm transition-all"
+                                    className="w-10 h-10 flex items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-white rounded-lg shadow-sm transition-all border border-transparent hover:border-gray-200"
                                 >
                                     <Plus className="w-4 h-4" />
                                 </button>
@@ -204,8 +204,8 @@ export default function ProductDetailsPage({ params }: { params: Promise<{ id: s
             {/* Related Products Section */}
             {relatedProducts.length > 0 && (
                 <div className="border-t border-gray-100 pt-16 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
-                    <div className="flex items-center justify-between mb-8">
-                        <h2 className="text-3xl font-black text-dark tracking-tight">
+                    <div className="flex items-center justify-between mb-10">
+                        <h2 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight">
                             You Might Also Like
                         </h2>
                         <Link href="/shop" className="text-primary font-medium hover:underline">

@@ -51,7 +51,7 @@ export function ProductCard({ product }: ProductCardProps) {
                 <div className="absolute inset-x-0 bottom-0 p-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                     <button
                         onClick={handleAddToCart}
-                        className="w-full bg-white/90 backdrop-blur-sm text-dark font-medium py-3 rounded-xl shadow-lg flex items-center justify-center gap-2 hover:bg-primary hover:text-white transition-colors"
+                        className="w-full bg-white/95 backdrop-blur-md text-gray-900 font-bold py-3 rounded-xl shadow-xl flex items-center justify-center gap-2 hover:bg-primary hover:text-white transition-all transform active:scale-95"
                     >
                         <ShoppingCart className="w-4 h-4" />
                         Quick Add
@@ -65,13 +65,13 @@ export function ProductCard({ product }: ProductCardProps) {
                         {product.category}
                     </span>
                     <div className="flex items-center gap-1">
-                        <Star className="w-3.5 h-3.5 fill-accent text-accent" />
-                        <span className="text-sm font-medium text-gray-700">{product.rating}</span>
+                        <Star className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
+                        <span className="text-sm font-bold text-gray-700">{product.rating}</span>
                     </div>
                 </div>
 
-                <Link href={`/products/${product.id}`} className="group-hover:text-primary transition-colors">
-                    <h3 className="font-semibold text-dark line-clamp-1 mb-1">{product.title}</h3>
+                <Link href={`/products/${product.id}`} className="group-hover:text-primary transition-colors block">
+                    <h3 className="font-bold text-gray-900 line-clamp-1 mb-1 text-lg tracking-tight">{product.title}</h3>
                 </Link>
 
                 <div className="mt-auto pt-4 flex items-center justify-between">
@@ -81,7 +81,7 @@ export function ProductCard({ product }: ProductCardProps) {
                                 ${product.originalPrice.toFixed(2)}
                             </span>
                         )}
-                        <span className="text-xl font-bold text-dark">${product.price.toFixed(2)}</span>
+                        <span className="text-2xl font-black text-indigo-600 tracking-tighter">${product.price.toFixed(2)}</span>
                     </div>
                     {product.originalPrice > product.price && (
                         <span className="bg-red-50 text-red-600 text-[10px] font-bold px-2 py-1 rounded">

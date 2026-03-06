@@ -108,7 +108,7 @@ export const Navbar = () => {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className="text-base font-semibold text-gray-800 hover:text-primary transition-colors"
+                                    className="text-base font-black text-gray-900 hover:text-primary transition-colors"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     {link.name}
